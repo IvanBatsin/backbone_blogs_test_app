@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogrole app</title>
+</head>
+<body>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Url</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <th><input type="text" class="author-input"></th>
+        <th><input type="text" class="title-input"></th>
+        <th><input type="text" class="url-input"></th>
+        <th><button class="add-blog">Add</button></th>
+      </tr>
+    </thead>
+    <tbody class="blogs-list">
+    </tbody>
+  </table>
+
+  <script type="text/template" class="blogs-list-template">
+    <td><span class="author"><%= author %></span></td>
+    <td><span class="title"><%= title %></span></td>
+    <td><span class="url"><%= url %></span></td>
+    <td>
+      <button class="edit-blog">Edit</button>
+      <button class="delete-blog">Delete</button>
+      <button class="update-blog" style="display: none;">Update</button>
+      <button class="cancel-blog" style="display: none;">Cancel</button>
+    </td>
+  </script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
